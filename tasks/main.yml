@@ -3,11 +3,13 @@
   get_url: >
     url={{ golang_url }}
     dest=/usr/local/src
+
 - name: untar the golang
   unarchive: >
     src=/usr/local/src/{{ tar_name }}
     dest=/usr/local/
     copy=no
+
 - name: copy golang.sh
   copy: src=golang.sh dest=/etc/profile.d/
 
